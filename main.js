@@ -88,14 +88,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Open sidebar
   hamburgerBtn.addEventListener("click", () => {
-      const isDarkMode = rootElement.classList.contains("dark");
-      themeToggleSidebar.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
-      sidebar.classList.remove("translate-x-full");
+    const isDarkMode = rootElement.classList.contains("dark");
+    themeToggleSidebar.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
+    sidebar.classList.remove("translate-x-full");
   });
 
   // Close sidebar
   closeSidebar.addEventListener("click", () => {
-    console.log('clicked')
     sidebar.classList.add("translate-x-full");
   });
 });
