@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const setTheme = () => {
     const isDarkMode = rootElement.classList.contains("dark");
     themeToggle.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
+    themeToggleSidebar.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
     github.innerHTML = isDarkMode ? githubSvgDark : githubSvgLight;
     linkedIn.innerHTML = isDarkMode ? linkedInSvgDark : linkedInSvgLight;
   };
@@ -89,11 +90,12 @@ document.addEventListener("DOMContentLoaded", () => {
   hamburgerBtn.addEventListener("click", () => {
       const isDarkMode = rootElement.classList.contains("dark");
       themeToggleSidebar.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
-    sidebar.classList.remove("translate-x-full");
+      sidebar.classList.remove("translate-x-full");
   });
 
   // Close sidebar
   closeSidebar.addEventListener("click", () => {
+    console.log('clicked')
     sidebar.classList.add("translate-x-full");
   });
 });

@@ -17,7 +17,7 @@
     <script src="./main.js"></script>
   </head>
   <body
-    class="relative bg-slate-200 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300"
+    class="relative overflow-x-hidden bg-slate-200 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300"
   >
     <button
       id="hamburger-btn"
@@ -90,6 +90,7 @@
               type="button"
               href="mailto:priyankbhardwaj1199@gmail.com"
               target="_blank"
+              referrerpolicy="no-referrer"
               class="text-white uppercase bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
             >
               Contact Me
@@ -132,6 +133,7 @@
             type="button"
             href="mailto:priyankbhardwaj1199@gmail.com"
             target="_blank"
+            referrerpolicy="no-referrer"
             class="text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
           >
             Contact Me
@@ -139,12 +141,14 @@
         </div>
       </div>
 
-      <div class="flex gap-4 m-2">
+      <div class="flex flex-wrap lg:flex-nowrap w-full gap-4 m-2">
         <!-- First Column -->
-        <div class="w-2/3 space-y-3">
+        <div class="lg:w-2/3 sm:w-full space-y-3">
           <div class="h-auto bg-slate-100 dark:bg-gray-800 rounded-sm p-4">
             <p class="capitalize text-3xl font-semibold">About me</p>
-            <p class="mt-4 text-base text-justify text-slate-600 dark:text-white">
+            <p
+              class="mt-4 text-base text-justify text-slate-600 dark:text-white"
+            >
               I am a passionate and dedicated Java Full Stack Developer with a
               strong foundation in designing, developing, and deploying scalable
               web applications. With expertise in both front-end and back-end
@@ -165,8 +169,8 @@
             <div
               class="bg-slate-50 dark:bg-gray-700 shadow-md rounded-lg p-4 transition-all hover:shadow-lg flex gap-4"
             >
-              <div class="w-1/5">
-                <img class="h-auto w-20" src="./photo.png" alt="" />
+              <div class="w-1/5 aspect-video">
+                <img class="w-full h-full object-contain rounded-md" src="./bankapp.png" alt="" />
               </div>
               <div class="w-4/5">
                 <h3 class="text-lg font-bold text-gray-800 dark:text-gray-100">
@@ -177,24 +181,119 @@
                   users to manage accounts, transfer funds securely, view
                   transaction history, and monitor balances in real-time.
                   Featuring robust security measures, including encryption and
-                  authentication, the platform supports seamless and a user-friendly interface
-                  for both customers and administrators
+                  authentication, the platform supports seamless and a
+                  user-friendly interface for both customers and administrators
                 </p>
 
-                <button
-                  role="button" class="me-4 text-blue-500 dark:text-blue-400 font-semibold text-sm mt-3 inline-block"
-                >
-                  Tech Stack
-                </button>
+                <div class="relative group inline">
+                  <button
+                    role="button"
+                    class="me-4 text-blue-500 dark:text-blue-400 font-semibold text-sm mt-3 inline-block"
+                  >
+                    Tech Stack
+                  </button>
+                  <div
+                    id="popoverts-right"
+                    role="tooltip"
+                    class="absolute -top-10 left-[4.3rem] z-10 invisible opacity-0 w-96 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 group-hover:visible group-hover:opacity-100"
+                  >
+                    <div
+                      class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700"
+                    >
+                      <h3 class="font-semibold text-gray-900 dark:text-white">
+                        Technological Stack
+                      </h3>
+                    </div>
+                    <div class="px-3 py-2">
+                      <ul class="list-disc pl-5">
+                        <li>
+                          <span class="font-semibold">Frontend:</span> Angular
+                          18, Tailwind CSS
+                        </li>
+                        <li>
+                          <span class="font-semibold">Backend:</span> Spring
+                          Boot, Java, Hibernate
+                        </li>
+                        <li>
+                          <span class="font-semibold">Database:</span> MySQL
+                        </li>
+                        <li>
+                          <span class="font-semibold">Version Control:</span>
+                          Git, GitHub
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
 
-                <a
-                  href="#"
-                  class="text-blue-500 dark:text-blue-400 font-semibold text-sm mt-3 inline-block hover:underline"
-                >
-                  View More
-                </a>
+                <div class="relative group inline">
+                  <button
+                    class="text-blue-500 dark:text-blue-400 font-semibold text-sm mt-3 inline-block hover:text-blue-500/80 dark:hover:text-blue-400/80"
+                  >
+                    View More
+                  </button>
+                  <div
+                    id="popover-right"
+                    role="tooltip"
+                    class="absolute -top-10 left-[4.3rem] z-10 invisible opacity-0 w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800 group-hover:visible group-hover:opacity-100"
+                  >
+                    <div
+                      class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700"
+                    >
+                      <h3 class="font-semibold text-gray-900 dark:text-white">
+                        Github links
+                      </h3>
+                    </div>
+                    <div class="px-3 py-2">
+                      <a
+                        class="dark:hover:text-blue-400 hover:text-blue-600 hover:underline"
+                        href="https://github.com/PriyankBhardwaj1199/bankapp-frontend.git"
+                        target="_blank"
+                        referrerpolicy="no-referrer"
+                        >Front-end</a
+                      >
+                    </div>
+                    <div class="px-3 py-2">
+                      <a
+                        class="dark:hover:text-blue-400 hover:text-blue-600 hover:underline"
+                        href="https://github.com/PriyankBhardwaj1199/bankapp-backend.git"
+                        target="_blank"
+                        referrerpolicy="no-referrer"
+                        >Back-end</a
+                      >
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+          <div class="h-auto bg-slate-100 dark:bg-gray-800 rounded-sm p-4">
+            <p class="mb-3 capitalize text-xl font-semibold">Experience</p>
+            <ul class="space-y-4">
+              <li class="p-4 bg-white dark:bg-gray-700 rounded-md shadow-sm transition duration-300">
+                <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200">
+                  Software Analyst II
+                </h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  DXC Technology &bull; Nov 2023 - Present
+                </p>
+                <p class="mt-2 text-gray-700 dark:text-gray-300">
+                  Spring Boot, Hibernate, Angular and Bootstrap
+                </p>
+              </li>
+              <li class="p-4 bg-white dark:bg-gray-700 rounded-md shadow-sm transition duration-300">
+                <h3 class="text-lg font-bold text-gray-800 dark:text-gray-200">
+                  Associate Professional Software Engineer
+                </h3>
+                <p class="text-sm text-gray-600 dark:text-gray-400">
+                  DXC Technology &bull; Sep 2022 - Nov 2023
+                </p>
+                <p class="mt-2 text-gray-700 dark:text-gray-300">
+                  Spring, JDBC, JSPs and Bootstrap
+                </p>
+              </li>
+            </ul>
+            
           </div>
           <div class="h-auto bg-slate-100 dark:bg-gray-800 rounded-sm p-4">
             <p class="mb-3 capitalize text-xl font-semibold">Timeline</p>
@@ -206,7 +305,7 @@
                 ></div>
                 <time
                   class="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-400"
-                  >October 2023</time
+                  >November 2023</time
                 >
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
                   Promoted to Software Analyst II
@@ -263,7 +362,7 @@
         </div>
 
         <!-- Second Column -->
-        <div class="w-1/3 space-y-3">
+        <div class="lg:w-1/3 sm:w-full space-y-3">
           <div class="h-auto bg-slate-100 dark:bg-gray-800 rounded-sm p-4">
             <div class="mb-3">
               <svg
@@ -305,7 +404,7 @@
                 <polyline points="3 7 12 13 21 7" />
               </svg>
               <a
-                href="#"
+                href="mailto:priyankbhardwaj1199@gmail.com"
                 class="text-base text-slate-500 dark:text-white font-semibold hover:underline"
                 >priyankbhardwaj1199@gmail.com</a
               >
@@ -799,6 +898,7 @@
               <a
                 href="https://medium.com/@snapofficial1999/handling-cors-policy-and-pre-flight-requests-in-springboot-a784485d1d60"
                 target="_blank"
+                referrerpolicy="no-referrer"
                 class="inline text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-600"
                 >Read more</a
               >
@@ -813,7 +913,9 @@
             <p class="mb-3 capitalize text-xl font-semibold">Education</p>
             <div class="space-y-4">
               <!-- Education Item 1 -->
-              <div class="bg-slate-50 dark:bg-gray-700 p-4 rounded-lg shadow-sm">
+              <div
+                class="bg-slate-50 dark:bg-gray-700 p-4 rounded-lg shadow-sm"
+              >
                 <h4
                   class="text-lg font-semibold text-gray-900 dark:text-gray-100"
                 >
@@ -833,7 +935,9 @@
             <p class="mb-3 capitalize text-xl font-semibold">Certifications</p>
             <div class="space-y-4">
               <!-- Certification Item 1 -->
-              <div class="bg-slate-50 dark:bg-gray-700 p-4 rounded-lg shadow-sm">
+              <div
+                class="bg-slate-50 dark:bg-gray-700 p-4 rounded-lg shadow-sm"
+              >
                 <h4
                   class="text-lg font-semibold text-gray-900 dark:text-gray-100"
                 >
@@ -848,7 +952,9 @@
               </div>
 
               <!-- Certification Item 2 -->
-              <div class="bg-slate-50 dark:bg-gray-700 p-4 rounded-lg shadow-sm">
+              <div
+                class="bg-slate-50 dark:bg-gray-700 p-4 rounded-lg shadow-sm"
+              >
                 <h4
                   class="text-lg font-semibold text-gray-900 dark:text-gray-100"
                 >
@@ -863,61 +969,14 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
-        <div
-          class="p-4 col-span-2 border-2 border-dashed border-gray-300 rounded-lg dark:border-gray-600 h-32 md:h-64"
-        >
-        <p class="text-3xl capitalize">About Me</p>
-      </div>
-        <div
-          class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-32 md:h-32"
-        ></div>
-       
-        
-      </div>
-
-      <div class="grid grid-cols-2 gap-4 mb-4">
-        <div
-          class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"
-        ></div>
-        <div
-          class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"
-        ></div>
-        <div
-          class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"
-        ></div>
-        <div
-          class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"
-        ></div>
-      </div>
-      <div
-        class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-96 mb-4"
-      ></div>
-      <div class="grid grid-cols-2 gap-4">
-        <div
-          class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"
-        ></div>
-        <div
-          class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"
-        ></div>
-        <div
-          class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"
-        ></div>
-        <div
-          class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-48 md:h-72"
-        ></div>
-      </div> -->
     </main>
 
-    
-
-<footer class="bg-slate-50 dark:bg-gray-800">
-  <div class="w-full text-center p-4 ">
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">&copy; All Rights Reserved.
-  </span>
-  </div>
-</footer>
-
+    <footer class="bg-slate-50 dark:bg-gray-800">
+      <div class="w-full text-center p-4">
+        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400"
+          >&copy; All Rights Reserved.
+        </span>
+      </div>
+    </footer>
   </body>
 </html>
