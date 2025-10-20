@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const github = document.getElementById("github");
   const linkedIn = document.getElementById("linked-in");
-
+  const devTo = document.getElementById("dev");
   const githubSvgDark = `
       <span class="[&>svg]:h-7 [&>svg]:w-7">
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 496 512">
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const linkedInSvgDark = `
     <span class="[&>svg]:h-7 [&>svg]:w-7">
                        <svg
-                         xmlns="http://www.w3.org/2000/svg"                         
+                         xmlns="http://www.w3.org/2000/svg"
                          fill="currentColor"
                          viewBox="0 0 448 512"
                        >
@@ -60,6 +60,40 @@ document.addEventListener("DOMContentLoaded", () => {
  </button>
     `;
 
+const devToSvgDark = `
+
+  <span class="[&>svg]:h-7 [&>svg]:w-7">
+    <!-- Dev.to logo SVG (light on dark) -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-labelledby="title2">
+      <title id="title2">DEV logo (light on dark)</title>
+      <rect x="0" y="0" width="48" height="48" rx="8" ry="8" fill="#ffffff"/>
+      <text x="24" y="28" text-anchor="middle" dominant-baseline="middle"
+            font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif"
+            font-weight="700" font-size="16" fill="#111827">DEV</text>
+    </svg>
+  </span>
+`;
+
+const devToSvgLight = `
+
+<button
+  type="button"
+  data-twe-ripple-init
+  data-twe-ripple-color="light"
+  class="mb-2 inline-flex items-center justify-center rounded bg-[#111827] p-2 shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg hover:opacity-80">
+  <span class="[&>svg]:h-5 [&>svg]:w-10">
+    <!-- Dev.to logo SVG (tight fit) -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-labelledby="title">
+      <title id="title">DEV logo (dark on light)</title>
+      <rect x="0" y="0" width="96" height="96" rx="12" ry="12" fill="#111827"/>
+      <text x="48" y="56" text-anchor="middle" dominant-baseline="middle"
+            font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif"
+            font-weight="700" font-size="72" fill="#ffffff">DEV</text>
+    </svg>
+  </span>
+</button>
+`;
+
   // Set initial theme and update elements
   const setTheme = () => {
     const isDarkMode = rootElement.classList.contains("dark");
@@ -67,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggleSidebar.textContent = isDarkMode ? "Light Mode" : "Dark Mode";
     github.innerHTML = isDarkMode ? githubSvgDark : githubSvgLight;
     linkedIn.innerHTML = isDarkMode ? linkedInSvgDark : linkedInSvgLight;
+    devTo.innerHTML = isDarkMode ? devToSvgDark: devToSvgLight ;
   };
 
   // Initial state
